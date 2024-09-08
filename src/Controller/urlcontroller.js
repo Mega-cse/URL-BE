@@ -7,7 +7,7 @@ export const shorten = async (req, res) => {
     console.log('Received request:', req.body);
     const { longUrl } = req.body;
     const shortId = nanoid(6); // Generates a unique short ID
-    const shortUrl = `http://localhost:5001/api/${shortId}`; // Explicitly set the base URL
+    const shortUrl = `https://url-backend-mod0.onrender.com/api/${shortId}`; // Explicitly set the base URL
   
     try {
       await URL.create({ longUrl, shortUrl, shortId });
