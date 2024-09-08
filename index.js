@@ -10,7 +10,7 @@ import userRoutes from './Routes/authRouter.js'
 dotenv.config()
 const app = express();
 connectDB()
-const port=process.env.PORT||5001;
+const port=process.env.PORT
 app.use(cors())
 app.use(bodyParser.json());
 app.use('/api',routes)
