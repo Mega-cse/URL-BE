@@ -16,6 +16,9 @@ app.use(cors())
 app.use(bodyParser.json());
 app.use('/api',router)
 app.use('/api/user',userRoutes)
+app.get('/',(req,res)=>{
+    res.send(`<h1>Welcome to URL Shortener</h1>`)
+})
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 })
